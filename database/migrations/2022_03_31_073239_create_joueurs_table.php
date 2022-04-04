@@ -23,7 +23,7 @@ return new class extends Migration
 			$table->string('genre');
 			$table->string('pays');
             $table->foreignId("role_id")->constrained("roles","id")->onUpdate("cascade");
-            $table->foreignId("photo_id")->constrained("photos","id")->onUpdate("cascade");
+            // ne pourrait attribuer pas d'autres roles à d'autre joueur 
             $table->foreignId("equipe_id")->constrained("equipes","id")->onUpdate("cascade");
             $table->timestamps();
         });

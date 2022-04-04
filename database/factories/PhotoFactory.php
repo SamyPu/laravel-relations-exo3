@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Joueur;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +17,11 @@ class PhotoFactory extends Factory
      */
     public function definition()
     {
+        static $i = 0;
+        $i++;
         return [
             'photo_joueur' => $this->faker->imageUrl(120, 100, 'cats'),
+			'joueur_id' => $i,
         ];
     }
 }

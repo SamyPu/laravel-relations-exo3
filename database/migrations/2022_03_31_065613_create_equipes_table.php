@@ -18,6 +18,10 @@ return new class extends Migration
 			$table->string('nom');
 			$table->string('ville');
 			$table->string('pays');
+			$table->integer('avant');
+			$table->integer('central');
+			$table->integer('arriere');
+			$table->integer('remplacant');
 			$table->integer('max_joueurs');
             $table->timestamps();
         });

@@ -18,7 +18,6 @@ class Joueur extends Model
 		'genre',
 		'pays',
 		'role_id',
-		'photo_id',
 		'equipe_id',
 	]; // model_anchor
 
@@ -28,12 +27,12 @@ class Joueur extends Model
 	{
 		return $this->belongsTo(Role::class);
 	}
-	public function photo()
-	{
-		return $this->belongsTo(Photo::class);
-	}
 	public function equipe()
 	{
 		return $this->belongsTo(Equipe::class);
+	}
+	public function photo()
+	{
+		return $this->hasOne(Photo::class);
 	}
 }

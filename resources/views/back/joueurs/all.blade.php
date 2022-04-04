@@ -67,5 +67,29 @@
                 @endforeach
             </tbody>
         </table>
+
     </div>
+
+    {{-- <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link"  href="{{ $joueurs->previousPageUrl() }}">Previous</a></li>
+          @for ($i = 0; $i < ($joueurs->total()/$joueurs->perPage()) ; $i++)
+            <li class="page-item"><a class="page-link" href="{{ $joueurs->url($i + 1) }}">{{ $i + 1 }}</a></li>
+          @endfor
+          <li class="page-item"><a class="page-link"  href="{{ $joueurs->nextPageUrl() }}">Next</a></li>
+        </ul>
+    </nav> --}}
+
+    <div>
+        {{ $joueurs->links("pagination::bootstrap-4") }}
+    </div>
+
+    {{-- {{ $joueurs->count() }}
+    {{ $joueurs->currentPage() }}
+    {{ $joueurs->hasPages() }}
+    {{ $joueurs->lastPage() }}
+    {{ $joueurs->lastItem() }}
+    {{ $joueurs->perPage() }}
+    {{ $joueurs->total() }}  --}}
+    
 @endsection

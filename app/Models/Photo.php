@@ -11,12 +11,13 @@ class Photo extends Model
 
 	protected $fillable = [
 		'photo_joueur',
+		'joueur_id',
 	]; // model_anchor
 
 	protected $table = "photos";
 
 	public function joueur()
 	{
-		return $this->hasOne(Joueur::class);
+		return $this->belongsTo(Joueur::class);
 	}
 }

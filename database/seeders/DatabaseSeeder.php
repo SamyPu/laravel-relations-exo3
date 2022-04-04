@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
 			RoleSeeder::class,
 			EquipeSeeder::class,
 		]);
-        Photo::factory(20)->create();
-        Joueur::factory(50)->create();
+        Joueur::factory(56)->create();
+        Photo::factory(56)->create();
+        // Photo se crer en même temps que le joueurs pas separer voir exo 2 
     }
 }

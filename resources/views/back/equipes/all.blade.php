@@ -74,18 +74,49 @@
                             <td>Europe</td>
                         @else
                             <td>Hors Europe</td>
-                        @endif  
-                        @foreach ($roles as $role)
-                            @php
-                                $number = 0;
-                                foreach ( $equipe->joueur as $joueur ) {
-                                    if ( $joueur->role->nom == $role->nom) {
-                                       $number += 1;
-                                    }
+                        @endif 
+
+                        
+                        @php
+                            $number = 0;
+                            foreach ( $equipe->joueur as $joueur ) {
+                                if ( $joueur->role->nom == $roles[0]->nom) {
+                                   $number += 1;
                                 }
-                            @endphp
-					        <td>{{ $number }} / {{ $role->maximum }}</td>   
-                        @endforeach
+                            }
+                        @endphp
+					    <td>{{ $number }} / {{ $equipe->avant }}</td>
+
+                        @php
+                            $number = 0;
+                            foreach ( $equipe->joueur as $joueur ) {
+                                if ( $joueur->role->nom == $roles[1]->nom) {
+                                   $number += 1;
+                                }
+                            }
+                        @endphp
+					    <td>{{ $number }} / {{ $equipe->central }}</td>
+
+                        @php
+                            $number = 0;
+                            foreach ( $equipe->joueur as $joueur ) {
+                                if ( $joueur->role->nom == $roles[2]->nom) {
+                                   $number += 1;
+                                }
+                            }
+                        @endphp
+					    <td>{{ $number }} / {{ $equipe->arriere }}</td>
+
+                        @php
+                            $number = 0;
+                            foreach ( $equipe->joueur as $joueur ) {
+                                if ( $joueur->role->nom == $roles[3]->nom) {
+                                   $number += 1;
+                                }
+                            }
+                        @endphp
+					    <td>{{ $number }} / {{ $equipe->remplacant}}</td>
+
                         <?php
                             $number_max = 0;
                             foreach ($joueurs as $joueur) {
@@ -95,6 +126,7 @@
                             }
                         ?>
 						<td>{{ $number_max }} / {{ $equipe->max_joueurs }}</td>
+                        
                         <td> {{-- all_td_anchor --}}
                             <div class='d-flex'>
                                 <form action='{{ route('equipe.destroy', $equipe->id) }}' method='post'>

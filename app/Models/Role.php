@@ -11,7 +11,6 @@ class Role extends Model
 
 	protected $fillable = [
 		'nom',
-		'maximum',
 	]; // model_anchor
 
 	protected $table = "roles";

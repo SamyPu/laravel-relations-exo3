@@ -18,19 +18,15 @@ class RoleSeeder extends Seeder
         //
 		DB::table("roles")->insert([
 			'nom' => 'Avant',
-			'maximum' => 3,
 		]);
         DB::table("roles")->insert([
 			'nom' => 'Central',
-			'maximum' => 3,
 		]);
         DB::table("roles")->insert([
 			'nom' => 'Arrière',
-			'maximum' => 3,
 		]);
         DB::table("roles")->insert([
 			'nom' => 'Remplaçant',
-			'maximum' => 5,
 		]);
     }
 }

@@ -13,6 +13,10 @@ class Equipe extends Model
 		'nom',
 		'ville',
 		'pays',
+		'avant',
+		'central',
+		'arriere',
+		'remplacant',
 		'max_joueurs',
 	]; // model_anchor
 

@@ -12,7 +12,8 @@ class JoueurController extends Controller
     //
     public function index()
     {
-        $joueurs = Joueur::all();
+        // $joueurs = Joueur::all();
+        $joueurs = Joueur::paginate(8);
         return view("/back/joueurs/all",compact("joueurs"));
     }
     public function create()

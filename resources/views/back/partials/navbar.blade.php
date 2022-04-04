@@ -51,31 +51,6 @@
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item  has-sub {{ request()->routeIs("photo.index")||request()->routeIs("photo.create") ? "active" : "" }}">
-                    <a href="#" class="sidebar-link">
-                        <i class="bi bi-stack"></i>
-                        <span>Photo</span>
-                    </a>
-                    <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="{{ route("photo.create") }}">Create Photo</a>
-                        </li>
-                        <li class="submenu-item ">
-                            <a href="{{ route("photo.index") }}">All Photo</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item  {{-- has-sub --}} {{ request()->routeIs("role.index") ? "active" : "" }}">
-                    <a href="{{ route("role.index") }}" class="sidebar-link">
-                        <i class="bi bi-stack"></i>
-                        <span>Role</span>
-                    </a>
-                    {{-- <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="{{ route("role.index") }}">All Role</a>
-                        </li>
-                    </ul> --}}
-                </li>
             </ul>  {{-- anchor_navbar --}}
         </div>
         <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>

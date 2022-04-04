@@ -27,11 +27,19 @@ class EquipeController extends Controller
             'nom'=> 'required',
             'ville'=> 'required',
             'pays'=> 'required',
+            'avant'=> 'required',
+            'central'=> 'required',
+            'arriere'=> 'required',
+            'remplacant'=> 'required',
             'max_joueurs'=> 'required',
         ]); // store_validated_anchor;
         $equipe->nom = $request->nom;
         $equipe->ville = $request->ville;
         $equipe->pays = $request->pays;
+        $equipe->avant = $request->avant;
+        $equipe->central = $request->central;
+        $equipe->arriere = $request->arriere;
+        $equipe->remplacant = $request->remplacant;
         $equipe->max_joueurs = $request->max_joueurs;
         $equipe->save(); // store_anchor
         return redirect()->route("equipe.index")->with("message", "Successful storage !");
@@ -55,11 +63,19 @@ class EquipeController extends Controller
             'nom'=> 'required',
             'ville'=> 'required',
             'pays'=> 'required',
+            'avant'=> 'required',
+            'central'=> 'required',
+            'arriere'=> 'required',
+            'remplacant'=> 'required',
             'max_joueurs'=> 'required',
         ]); // update_validated_anchor;
         $equipe->nom = $request->nom;
         $equipe->ville = $request->ville;
         $equipe->pays = $request->pays;
+        $equipe->avant = $request->avant;
+        $equipe->central = $request->central;
+        $equipe->arriere = $request->arriere;
+        $equipe->remplacant = $request->remplacant;
         $equipe->max_joueurs = $request->max_joueurs;
         $equipe->save(); // update_anchor
         return redirect()->route("equipe.index")->with("message", "Successful update !");

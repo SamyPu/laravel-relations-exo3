@@ -55,11 +55,11 @@ class JoueurFactory extends Factory
 			'email' => $this->faker->safeEmail(),
 			'genre' => $gender,
 			'pays' => $this->faker->country(),
-			'photo_id' => $this->faker->numberBetween(1, count(Photo::all())),
 			// 'equipe_id' => $this->faker->numberBetween(1, count(Equipe::all())),
 			// 'role_id' => $this->faker->numberBetween(1, count(Role::all())),
 			'role_id' => $role_id,
 			'equipe_id' => $equipe_id,
         ];
+        Photo::factory(1)->create();
     }
 }
